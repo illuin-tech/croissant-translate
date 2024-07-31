@@ -16,7 +16,7 @@ import { promt_description } from './prompt';
 
 declare global {
 	interface Window {
-		chrome?: any;
+		chrome?: unknown;
 	}
 }
 
@@ -29,7 +29,7 @@ if (appConfig.useIndexedDBCache) {
 }
 
 function App() {
-	const selectedModel = 'CroissantLLMChat-v0.1-q0f16';
+	const selectedModel = 'CroissantLLM_ft_translation_correction-q0f16';
 	const [engine, setEngine] = useState<EngineInterface | null>(null);
 	const [progress, setProgress] = useState('Not loaded');
 	const [progressPercentage, setProgressPercentage] = useState(0);
